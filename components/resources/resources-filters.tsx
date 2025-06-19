@@ -140,29 +140,6 @@ export function ResourcesFilters() {
         </CardContent>
       </Card>
 
-      {/* ⭐ CALIFICACIÓN */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-lg">Calificación</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-3">
-          {[5, 4, 3].map((rating) => (
-            <div key={rating} className="flex items-center space-x-2">
-              <Checkbox id={`rating-${rating}`} />
-              <label htmlFor={`rating-${rating}`} className="flex items-center space-x-1 cursor-pointer">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className={`text-sm ${i < rating ? "text-yellow-500" : "text-gray-300"}`}>
-                      ★
-                    </span>
-                  ))}
-                </div>
-                <span className="text-sm text-gray-600">y más</span>
-              </label>
-            </div>
-          ))}
-        </CardContent>
-      </Card>
 
       {/* 🔄 LIMPIAR FILTROS */}
       <Button variant="outline" className="w-full" onClick={clearFilters}>
