@@ -18,7 +18,7 @@ export function CoursesFilters() {
   const categories = [
     { id: "redes-sociales", label: "Redes Sociales", count: 1 },
     { id: "inteligencia-artificial", label: "Inteligencia Artificial", count: 1 },
-    { id: "community-building", label: "Community Building", count: 1 },
+    { id: "community-building", label: "Construcción de Comunidad", count: 1 },
     { id: "creacion-contenido", label: "Creación de Contenido", count: 1 },
     { id: "colaboraciones", label: "Colaboraciones", count: 1 },
     { id: "productividad", label: "Productividad", count: 1 },
@@ -107,7 +107,14 @@ export function CoursesFilters() {
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="px-2">
-            <Slider value={priceRange} onValueChange={setPriceRange} max={300} min={0} step={10} className="w-full" />
+            <Slider
+              value={priceRange}
+              onValueChange={setPriceRange}
+              max={300}
+              min={0}
+              step={10}
+              className="w-full [&>span:first-child]:bg-gray-800 [&>span:first-child]:h-2 [&_[role=slider]]:bg-brand-turquoise [&_[role=slider]]:border-2 [&_[role=slider]]:border-white [&_[role=slider]]:shadow-lg"
+            />
           </div>
           <div className="flex items-center justify-between text-sm text-gray-600">
             <span>${priceRange[0]}</span>
